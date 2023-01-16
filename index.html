@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/matrix_calculator.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./js/matrix_calculator.js"></script>
+    <script src="https://kit.fontawesome.com/df5971e9bf.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <title>Matrix Calculator</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="title">
+            <h1>Matrix Calculator</h1>
+            <p> 6행 6열 까지 입력 가능합니다.</p>
+        </section>
+        <!--alert창-->
+        <section class="alertBox">
+            <section class="alertMatrix">
+                <button class="closeBtn">Close</button>
+            </section>
+        </section>
+        <!--행렬/result박스-->
+        <section class="abBox">
+            <div class="flexBox">
+                <div class="arr1Box">
+                    <h2>matrixA</h2>
+                    <input id="aRow" type="text" maxlength='1' min="0" max="6" step="1" autofocus required
+                        placeholder="행" oninput="this.value = this.value.replace(/[^1-6.]/g, '');">
+                    <input id="aCol" type="text" maxlength='1' min="0" max="6" step="1" autofocus required
+                        placeholder="열" oninput="this.value = this.value.replace(/[^1-6.]/g, '');">
+                    <i class="fa-solid fa-play playBtn fa-lg"></i>
+                    <div class="asolBox"></div>
+                </div>
+                <div class="solutionBox">
+                    <h2>Result</h2>
+                    <div class="resultBox"></div>
+                </div>
+                <div class="arr2Box">
+                    <h2>matrixB</h2>
+                    <input id="bRow" type="text" maxlength='1' min="0" max="6" step="1" autofocus required
+                        placeholder="행" oninput="this.value = this.value.replace(/[^1-6.]/g, '');">
+                    <input id="bCol" type="text" maxlength='1' min="0" max="6" step="1" autofocus required
+                        placeholder="열" oninput="this.value = this.value.replace(/[^1-6.]/g, '');">
+                    <i class="fa-solid fa-play playBtn fa-lg"></i>
+                    <div class="bsolBox"></div>
+                </div>
+            </div> 
+        </section>
+        <!--버튼 박스-->
+        <section class="calButtonBox">
+            <div class="randomBtn">Random</div>
+            <div class="plusBtn"><i class="fa-solid fa-plus"></i></div>
+            <div class="minusBtn"><i class="fa-solid fa-minus"></i></div>
+            <div class="multiplayBtn"><i class="fa-solid fa-xmark"></i></div>
+            <div class="resetBtn">AB-Reset</div>
+        </section>
+    </div>
+</body>
+
+</html>
