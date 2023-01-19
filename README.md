@@ -1,3 +1,5 @@
+<div align="center"><img src="img/img.png" width="500"></div>
+
 # application test
 ## matrix calculator -javascript portfolio
 
